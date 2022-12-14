@@ -1,6 +1,6 @@
 def pi(*imp, decimal_bite):
     if not imp:
-        return(float(3.1415926535))
+        return float(3.1415926535)
     else:
         imp = imp[0]
         general_pi = ["3", ".1", "4", "1", "5", "9", "2", "6", "5", "3", "5", "8", "9", "7", "9", "3", "2", "3", "8",
@@ -60,6 +60,9 @@ def pi(*imp, decimal_bite):
         for k in range(int(imp) + 1):
             str_pi = general_pi[k]
             return_pi = return_pi + str_pi
+        return float(return_pi)  # A temporary line of code. The main thing is not to forget to delete it when we finish the rounding check script.
+# Check for rounding. Not necessarily when (decimal_date == False).
+# Not finished!
 #        if decimal_bite:
 #           if (int(general_pi[len(return_pi)]) == 5) and (imp > 2):
 #               decimal_bite = int(1)
@@ -74,6 +77,6 @@ def pi(*imp, decimal_bite):
 #           elif (int(general_pi[len(return_pi)]) > 4) and (imp > 2):
 #              return_pi[-1] = str(int(return_pi[-1]) + 1)
 #           else:
-#               return (float(return_pi))
+#               return float(return_pi)
 #        else:
-#            return (float(return_pi))
+#            return float(return_pi)
