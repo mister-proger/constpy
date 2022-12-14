@@ -1,4 +1,4 @@
-def pi(*imp):
+def pi(*imp, *zero_bite):
     if not imp:
         return(float(3.1415926535))
     else:
@@ -8,6 +8,19 @@ def pi(*imp):
         for k in range(int(imp) + 1):
             str_pi = general_pi[k]
             return_pi = return_pi + str_pi
-#        if (int(general_pi[len(return_pi)]) > 4) and (imp > 2):
-#            return_pi[-1] = str(int(return_pi[-1]) + 1)
-        return(float(return_pi))
+#        if zero_bite:
+#           if (int(general_pi[len(return_pi)]) == 5) and (imp > 2):
+#               zero_bite = int(1)
+#               while True:
+#                   if (int(general_pi[len(return_pi)] + zero_bite) == 5):
+#                       zero_bite = zero_bite + 1
+#                   elif (int(general_pi[len(return_pi)]) > 4):
+#                       return_pi[-1] = str(int(return_pi[-1]) + 1)
+#                   else:
+#                       break
+#           elif (int(general_pi[len(return_pi)]) > 4) and (imp > 2):
+#              return_pi[-1] = str(int(return_pi[-1]) + 1)
+#           else:
+#               return (float(return_pi))
+#        else:
+#            return (float(return_pi))
