@@ -1,4 +1,4 @@
-def pi(*imp, decimal_bite):
+def pi(*imp):
     if not imp:
         return float(3.1415926535)
     else:
@@ -55,11 +55,10 @@ def pi(*imp, decimal_bite):
                       "8", "8", "2", "3", "5", "3", "7", "8", "7", "5", "9", "3", "7", "5", "1", "9", "5", "7", "7",
                       "8", "1", "8", "5", "7", "7", "8", "0", "5", "3", "2", "1", "7", "1", "2", "2", "6", "8", "0",
                       "6", "6", "1", "3", "0", "0", "1", "9", "2", "7", "8", "7", "6", "6", "1", "1", "1", "9", "5",
-                      "9", "0", "9", "2", "1", "6", "4", "2", "0", "1", "9", "8", "9"]
-        return_pi = str("")
-        for k in range(int(imp) + 1):
-            str_pi = general_pi[k]
-            return_pi = return_pi + str_pi
+                      "9", "0", "9", "2", "1", "6", "4", "2", "0", "1", "9", "8", "9"]  # The number of pi in the form of a list. exactly 1000 and 1 digit.
+        return_pi = str("")  # Creating a variable that we will fill with the output pi.
+        for k in range(int(imp) + 1):  # A huge and disgusting crutch. But it works!
+            return_pi = return_pi + general_pi[k]  # Step-by-step filling in the variable to return pi.
         return float(return_pi)  # A temporary line of code. The main thing is not to forget to delete it when we finish the rounding check script.
 # Check for rounding. Not necessarily when (decimal_date == False).
 # Not finished!
