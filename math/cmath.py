@@ -8,7 +8,7 @@ def pi(imp):
             str_pi = general_pi[k]
             return_pi = return_pi + str_pi
         if int(general_pi[len(return_pi) + 1]) > 4:
-            return_pi[-1] = str(int(return_pi[-1) + 1)
+            return_pi[-1] = str(int(return_pi[-1]) + 1)
         return(int(return_pi))
 
 k = int(input())
