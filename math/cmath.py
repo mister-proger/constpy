@@ -1,4 +1,5 @@
 import decimal
+import math
 
 def pi(*imp):
     if not imp:
@@ -25,3 +26,13 @@ def tay(*imp):
         return decimal.Decimal(2 * pi())
     else:
         return decimal.Decimal(2 * pi(int(imp)))
+
+def e(*imp):
+    if not imp:
+        return e(50)
+    else:
+        imp = imp[0]
+        return_e = int(0)
+        for n in range(imp):
+            return_e = return_e + 1 / math.factorial(n)
+        return decimal.Decimal(return_e)
