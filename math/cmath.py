@@ -8,7 +8,7 @@ def pi(*imp):
         imp = imp[0]
         return_pi = int(0)
         int_set_pi = int(1)
-        for i in range(imp):
+        for n in range(imp):
             return_pi = return_pi + 1 / int_set_pi
             int_set_pi = (abs(int_set_pi) + 2) * check_int_set_pi(int_set_pi)
         return decimal.Decimal(return_pi * 4)
@@ -36,3 +36,13 @@ def e(*imp):
         for n in range(imp):
             return_e = return_e + 1 / math.factorial(n)
         return decimal.Decimal(return_e)
+
+def fi(*imp):
+    if not imp:
+        return fi(50)
+    else:
+        imp = imp[0]
+        return_fi = int(0)
+        for n in range(imp):
+            return_fi = math.sqrt(return_fi + 1)
+        return decimal.Decimal(return_fi)
