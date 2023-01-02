@@ -46,3 +46,13 @@ def fi(*imp):
         for n in range(imp):
             return_fi = math.sqrt(return_fi + 1)
         return decimal.Decimal(return_fi)
+
+def G(*imp):
+    if not imp:
+        return G(450)
+    else:
+        imp = imp[0]
+        return_G = int(0)
+        for n in range(imp):
+            return_G = return_G + (((-1) ** n) / ((2 * n + 1) ** 2))
+        return decimal.Decimal(return_G)
